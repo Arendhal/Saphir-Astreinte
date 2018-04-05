@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Fri Mar 30 08:49:30 MUT 2018
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\assets\\debug
+0.path=custom-font.ttf
+0.set=ASSET
+count=1

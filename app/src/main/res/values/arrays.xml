@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string-array name="screenOrientationPrefArray">
+     <item>Auto</item>
+     <item>Paysage</item>
+     <item>Portrait</item>
+ </string-array>
+ <string-array name="screenOrientationPrefArrayValues">
+     <item>0</item>
+     <item>1</item>
+     <item>2</item>
+ </string-array>
+ <string-array name="volumeButtonsPrefArray">
+     <item>Demarrer/Arreter et Recommencer</item>
+     <item>Controle du volume</item>
+ </string-array>
+ <string-array name="volumeButtonsPrefArrayValues">
+     <item>0</item>
+     <item>1</item>
+ </string-array>
+</resources> 

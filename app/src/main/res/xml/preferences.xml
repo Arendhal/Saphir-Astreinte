@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Preferences du Compte a rebours">
+		<CheckBoxPreference android:key="timerDefaultVibratePref"
+			android:title="Ajout d'un Compte a Rebours: Vibration"
+			android:summary="Tous les nouveaux comptes a rebours vont vibrer par défaut"
+			android:defaultValue="@string/timerDefaultVibratePrefDefaultValue" />
+		<EditTextPreference android:key="timerDefaultNumBeepsPref"
+			android:title="Ajout d'un Compte a Rebours"
+			android:summary="Tous les nouveaux comptes a rebours/intervalles auront ce nombre de sonnerie par défaut"
+			android:defaultValue="@string/timerDefaultNumBeepsPrefDefaultValue" />
+		<EditTextPreference android:key="timerDefaultBeepPref"
+			android:title="Ajout d'un Compte a Rebours"
+			android:summary="Tous les nouveaux comptes a rebours/intervalles utiliseront cette sonnerie par défaut"
+			android:defaultValue="@string/timerDefaultBeepPrefDefaultValue" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Préferences Générales">
+		<ListPreference android:key="volumeButtonsPref"
+			android:title="Boutons de volume"
+			android:summary="Volume haut/bas: Commencer/Arreter (vol haut) et recommencer (vol bas), ou controle du volume"
+			android:defaultValue="@string/volumeButtonsPrefDefaultValue"
+			android:entries="@array/volumeButtonsPrefArray" android:entryValues="@array/volumeButtonsPrefArrayValues" />
+		<CheckBoxPreference android:key="hapticFeedbackPref"
+			android:title="Vibration au toucher" android:summary="Activer la vibration au toucher"
+			android:defaultValue="@string/hapticFeedbackPrefDefaultValue" />
+		<CheckBoxPreference android:key="keepScreenOnPref"
+			android:title="Garder l'écran allumé" android:summary="Toujours garder l'écran allumé lorsque l'application est lancée"
+			android:defaultValue="@string/keepScreenOnPrefDefaultValue" />
+		<ListPreference android:key="screenOrientationPref"
+			android:title="Orientation de l'écran"
+			android:summary="Orientation: Auto, Paysage, Portrait"
+			android:defaultValue="@string/screenOrientationPrefDefaultValue"
+			android:entries="@array/screenOrientationPrefArray"
+			android:entryValues="@array/screenOrientationPrefArrayValues" />
+	</PreferenceCategory>
+</PreferenceScreen>

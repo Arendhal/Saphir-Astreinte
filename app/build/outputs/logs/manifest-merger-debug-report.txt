@@ -1,0 +1,262 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:2:1-96:12
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:2:1-96:12
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:2:1-96:12
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:2:1-96:12
+MERGED from [com.google.android.gms:play-services-ads:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-9.2.1.aar\cc962448cccdeabdccd4bfb3befec22a\AndroidManifest.xml:16:1-20:12
+MERGED from [com.android.support:design:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\design-23.2.1.aar\7399219df999a20c20c94280f0f70ab2\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.2.1.aar\4d224ca703d7f81d7c539f69ba2a2186\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:16:1-33:12
+MERGED from [com.google.android.gms:play-services-clearcut:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-9.2.1.aar\082e295f56d19898bd6f897a771fda6f\AndroidManifest.xml:16:1-20:12
+MERGED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.1.aar\e0889435039f84f6a1add5a3a0a5d62c\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-gass:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-gass-9.2.1.aar\1d2a564a94aba47a3ddf45a47c4ed611\AndroidManifest.xml:16:1-20:12
+MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.2.1.aar\0af4d30618ea7a4edea009ceb534a15f\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.2.1.aar\61ba3cb4b1eb842c8bf35d32b1aef42f\AndroidManifest.xml:16:1-26:12
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.2.1.aar\2a07b9c77fd1591c48b7d59ed0e94837\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.2.1.aar\d67e36b2892f1c0863e7e1b03df6a46a\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:recyclerview-v7:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-23.2.1.aar\88060493f3d242c482b37a2d076f830f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-v4-23.2.1.aar\aaaeec6e246b0cc22d5a51fca6e96aef\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:2:1-96:12
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:2:1-96:12
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:2:1-96:12
+	package
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:3:2-32
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+	android:sharedUserLabel
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:7:2-53
+	android:sharedUserId
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:6:2-45
+	android:versionName
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:5:2-29
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:4:2-25
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:10:2-65
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:10:19-62
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:11:2-63
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:11:19-60
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:12:2-64
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:12:19-61
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:13:2-76
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:21:5-78
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:13:19-73
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:14:2-78
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:14:19-75
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:15:2-77
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:15:19-75
+uses-feature#android.hardware.touchscreen
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:17:2-19:30
+	android:required
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:19:3-27
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:18:3-46
+uses-feature#android.hardware.location.gps
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:21:2-23:30
+	android:required
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:23:3-27
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:22:3-47
+uses-feature#android.hardware.telephony
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:25:2-27:30
+	android:required
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:27:3-27
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:26:3-44
+application
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:29:2-95:16
+MERGED from [com.android.support:design:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\design-23.2.1.aar\7399219df999a20c20c94280f0f70ab2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\design-23.2.1.aar\7399219df999a20c20c94280f0f70ab2\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.2.1.aar\4d224ca703d7f81d7c539f69ba2a2186\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.2.1.aar\4d224ca703d7f81d7c539f69ba2a2186\AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.android.gms:play-services-clearcut:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-9.2.1.aar\082e295f56d19898bd6f897a771fda6f\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-9.2.1.aar\082e295f56d19898bd6f897a771fda6f\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.1.aar\e0889435039f84f6a1add5a3a0a5d62c\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.1.aar\e0889435039f84f6a1add5a3a0a5d62c\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-gass:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-gass-9.2.1.aar\1d2a564a94aba47a3ddf45a47c4ed611\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-gass:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-gass-9.2.1.aar\1d2a564a94aba47a3ddf45a47c4ed611\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.2.1.aar\0af4d30618ea7a4edea009ceb534a15f\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.2.1.aar\0af4d30618ea7a4edea009ceb534a15f\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.2.1.aar\61ba3cb4b1eb842c8bf35d32b1aef42f\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.2.1.aar\61ba3cb4b1eb842c8bf35d32b1aef42f\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.2.1.aar\2a07b9c77fd1591c48b7d59ed0e94837\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.2.1.aar\2a07b9c77fd1591c48b7d59ed0e94837\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.2.1.aar\d67e36b2892f1c0863e7e1b03df6a46a\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.2.1.aar\d67e36b2892f1c0863e7e1b03df6a46a\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-v4-23.2.1.aar\aaaeec6e246b0cc22d5a51fca6e96aef\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-v4-23.2.1.aar\aaaeec6e246b0cc22d5a51fca6e96aef\AndroidManifest.xml:22:5-20
+	android:supportsRtl
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:34:3-29
+	android:label
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:32:3-35
+	android:icon
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:31:3-39
+	android:allowBackup
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:30:3-29
+	android:theme
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:33:3-34
+activity#com.google.android.gms.ads.AdActivity
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:36:3-43:14
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:26:9-29:64
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:26:9-29:64
+	android:configChanges
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:38:4-113
+	android:theme
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:39:4-52
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:37:4-56
+meta-data#com.google.android.gms.version
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:40:4-42:61
+	android:value
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:42:5-58
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:41:5-50
+activity#com.saphir.astreinte.MainActivity
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:45:3-52:14
+	android:launchMode
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:47:4-34
+	android:theme
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:46:4-47
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:45:13-61
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:48:4-51:20
+action#android.intent.action.MAIN
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:49:5-57
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:49:13-54
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:50:5-65
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:50:15-62
+activity#com.saphir.astreinte.StopwatchActivity
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:54:3-57:14
+	android:launchMode
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:56:4-34
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:55:4-57
+activity#com.saphir.astreinte.TimerActivity
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:59:3-62:14
+	android:launchMode
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:61:4-34
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:60:4-53
+activity#com.saphir.astreinte.PreferencesActivity
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:64:3-67:14
+	android:launchMode
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:66:4-34
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:65:4-59
+receiver#com.saphir.astreinte.receivers.TimerExpiry
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:69:3-71:14
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:70:4-61
+receiver#com.saphir.astreinte.MainActivity$MainActivityBroadcastReceiver
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:72:3-74:14
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:73:4-82
+receiver#com.saphir.astreinte.TimerActivity$TimerActivityBroadcastReceiver
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:75:3-77:14
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:76:4-84
+receiver#com.saphir.astreinte.receivers.BootComplete
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:78:3-82:14
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:78:13-71
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:79:4-81:20
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:80:5-67
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:80:13-64
+provider#com.saphir.astreinte.providers.StopwatchProvider
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:84:3-88:14
+	android:authorities
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:86:4-74
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:85:4-67
+provider#com.saphir.astreinte.providers.TimerProvider
+ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:89:3-92:14
+	android:authorities
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:90:4-70
+	android:name
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml:89:13-72
+uses-sdk
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.gms:play-services-ads:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-9.2.1.aar\cc962448cccdeabdccd4bfb3befec22a\AndroidManifest.xml:19:5-42
+MERGED from [com.google.android.gms:play-services-ads:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-9.2.1.aar\cc962448cccdeabdccd4bfb3befec22a\AndroidManifest.xml:19:5-42
+MERGED from [com.android.support:design:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\design-23.2.1.aar\7399219df999a20c20c94280f0f70ab2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\design-23.2.1.aar\7399219df999a20c20c94280f0f70ab2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.2.1.aar\4d224ca703d7f81d7c539f69ba2a2186\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.2.1.aar\4d224ca703d7f81d7c539f69ba2a2186\AndroidManifest.xml:21:5-23:78
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-clearcut:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-9.2.1.aar\082e295f56d19898bd6f897a771fda6f\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-clearcut:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-9.2.1.aar\082e295f56d19898bd6f897a771fda6f\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.1.aar\e0889435039f84f6a1add5a3a0a5d62c\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.1.aar\e0889435039f84f6a1add5a3a0a5d62c\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-gass:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-gass-9.2.1.aar\1d2a564a94aba47a3ddf45a47c4ed611\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-gass:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-gass-9.2.1.aar\1d2a564a94aba47a3ddf45a47c4ed611\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.2.1.aar\0af4d30618ea7a4edea009ceb534a15f\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.2.1.aar\0af4d30618ea7a4edea009ceb534a15f\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.2.1.aar\61ba3cb4b1eb842c8bf35d32b1aef42f\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.2.1.aar\61ba3cb4b1eb842c8bf35d32b1aef42f\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.2.1.aar\2a07b9c77fd1591c48b7d59ed0e94837\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.2.1.aar\2a07b9c77fd1591c48b7d59ed0e94837\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.2.1.aar\d67e36b2892f1c0863e7e1b03df6a46a\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.2.1.aar\d67e36b2892f1c0863e7e1b03df6a46a\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:recyclerview-v7:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-23.2.1.aar\88060493f3d242c482b37a2d076f830f\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-23.2.1.aar\88060493f3d242c482b37a2d076f830f\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-v4-23.2.1.aar\aaaeec6e246b0cc22d5a51fca6e96aef\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\support-v4-23.2.1.aar\aaaeec6e246b0cc22d5a51fca6e96aef\AndroidManifest.xml:20:5-43
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.2.1.aar\4d224ca703d7f81d7c539f69ba2a2186\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\src\main\AndroidManifest.xml
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:30:9-31:52
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:31:13-50
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-9.2.1.aar\f76d127298f2c750ede059e272ffa69d\AndroidManifest.xml:30:19-91
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.1.aar\e0889435039f84f6a1add5a3a0a5d62c\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.1.aar\e0889435039f84f6a1add5a3a0a5d62c\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.1.aar\e0889435039f84f6a1add5a3a0a5d62c\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\LEGUEN\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.1.aar\e0889435039f84f6a1add5a3a0a5d62c\AndroidManifest.xml:20:19-85

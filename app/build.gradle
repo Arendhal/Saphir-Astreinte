@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "com.saphir.astreinte"
+        minSdkVersion 15
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.android.gms:play-services-ads:9.2.1'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    implementation files('poi-3.9/poi-3.9-20121203.jar')
+    implementation files('poi-3.9/poi-examples-3.9-20121203.jar')
+    implementation files('poi-3.9/poi-excelant-3.9-20121203.jar')
+    implementation files('poi-3.9/poi-ooxml-3.9-20121203.jar')
+    implementation files('poi-3.9/poi-ooxml-schemas-3.9-20121203.jar')
+    implementation files('poi-3.9/poi-scratchpad-3.9-20121203.jar')
+    implementation files('poi-3.9/lib/commons-codec-1.5.jar')
+    implementation files('poi-3.9/lib/junit-3.8.1.jar')
+    implementation files('poi-3.9/lib/commons-logging-1.1.jar')
+    implementation files('poi-3.9/lib/log4j-1.2.13.jar')
+    implementation files('poi-3.9/ooxml-lib/xmlbeans-2.3.0.jar')
+    implementation files('poi-3.9/ooxml-lib/dom4j-1.6.1.jar')
+    implementation files('poi-3.9/ooxml-lib/stax-api-1.0.1.jar')
+}
