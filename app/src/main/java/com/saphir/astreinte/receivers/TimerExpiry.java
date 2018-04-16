@@ -288,7 +288,7 @@ public class TimerExpiry extends BroadcastReceiver
         sheet1.setColumnWidth(1, (20 * 1250));
 
         File folder = new File(context.getExternalFilesDir(null),"");
-        File file = new File(folder,"Rapport_Timers.xls");
+        File file = new File(folder,"RapportTimers_"+TimerActivity.strDate+".xls");
         FileOutputStream fOut = null;
         try {
 

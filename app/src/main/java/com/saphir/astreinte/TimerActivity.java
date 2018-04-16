@@ -41,8 +41,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.saphir.astreinte.Timer.Timers;
+import com.saphir.astreinte.receivers.TimerExpiry;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -50,6 +52,7 @@ import java.lang.reflect.Field;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
@@ -142,7 +145,7 @@ public class TimerActivity extends Activity implements OnClickListener {
 	private DialogInterface.OnClickListener alertDialogClickListener;
 	private AlertDialog.Builder alertDialog;
 	public static MediaPlayer mediaPlayer = null;
-
+    public static String strDate="";
     public static Workbook wb_timer;
 	
     @Override
@@ -188,9 +191,27 @@ public class TimerActivity extends Activity implements OnClickListener {
 	}
 
     public  Workbook CreateWorkbook(Context context){
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy-hh-mm");
+        Date date = Calendar.getInstance().getTime();
+        strDate=sdf.format(date);
 
+        File folder = new File(context.getExternalFilesDir(null),"");
+		folder.mkdirs();
+		File file = new File(folder,"RapportTimers_"+strDate+".xls");
+
+		if(file.exists()){
+		    try {
+                FileInputStream fileInputStream = new FileInputStream(file);
+                wb_timer=new HSSFWorkbook(fileInputStream);
+            }
+            catch(Exception e){
+		        Log.e("TimerActivity","Error: "+e.toString());
+            }
+            TimerExpiry.RowNumber+=3;
+		    return wb_timer;
+        }
         wb_timer = new HSSFWorkbook();
-        Cell c = null;
+        Cell c ;
 
         //Cell style for header row
         CellStyle cs =  wb_timer.createCellStyle();
@@ -198,7 +219,7 @@ public class TimerActivity extends Activity implements OnClickListener {
         cs.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 
         //New Sheet
-        Sheet sheet1 = null;
+        Sheet sheet1;
         sheet1 =  wb_timer.createSheet("Rapport_Agents");
 
         // Generate column headings
@@ -213,9 +234,7 @@ public class TimerActivity extends Activity implements OnClickListener {
         sheet1.setColumnWidth(0, (15 * 700));
         sheet1.setColumnWidth(1, (15 * 500));
 
-        File folder = new File(context.getExternalFilesDir(null),"");
-        folder.mkdirs();
-        File file = new File(folder,"Rapport_Timers.xls");
+
         try {
             file.createNewFile();
 

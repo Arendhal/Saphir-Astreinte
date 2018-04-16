@@ -53,10 +53,6 @@ public class Timer {
     public static String title = null;
     public String beep = "";
 
-  	public static int RowNumber=1;
-
-
-
 	public Timer() {
 	}
 	

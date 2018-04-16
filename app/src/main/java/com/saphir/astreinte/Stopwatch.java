@@ -230,7 +230,7 @@ public class Stopwatch {
         sheet1.setColumnWidth(1, (20 * 1250));
 
         File folder = new File(context.getExternalFilesDir(null),"");
-		File file = new File(folder,"Rapport_Chronos.xls");
+		File file = new File(folder,"RapportChronos_"+StopwatchActivity.strDate+".xls");
 		FileOutputStream fOut = null;
 		try {
             fOut =  new FileOutputStream(file);

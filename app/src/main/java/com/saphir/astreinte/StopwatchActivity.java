@@ -11,6 +11,7 @@ import android.database.Cursor;
 import android.graphics.Rect;
 import android.media.AudioManager;
 import android.net.Uri;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -44,9 +45,13 @@ import org.apache.poi.ss.usermodel.Workbook;
 import com.saphir.astreinte.Stopwatch.Stopwatches;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class StopwatchActivity extends Activity implements OnClickListener {
 
@@ -102,6 +107,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 	//private static final String TAG = "StopwatchActivity";
 	public static final Uri URI = Stopwatch.Stopwatches.CONTENT_URI;
 	public static final int ACTIVITY_TAB_NUMBER = 1;
+    public static String strDate=" ";
 
 	/** Called when the activity is first created. */
 	@Override
@@ -143,9 +149,27 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 
 	}
     public  Workbook CreateWorkbook(Context context){
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy-hh-mm");
+        Date date = Calendar.getInstance().getTime();
+        strDate=sdf.format(date);
 
-        wb_stopwatch = new HSSFWorkbook();
-        Cell c = null;
+		File folder = new File(context.getExternalFilesDir(null),"");
+		folder.mkdirs();
+		File file = new File(folder,"RapportChronos_"+strDate+".xls");
+
+        if(file.exists()){
+            try {
+                FileInputStream fileInputStream = new FileInputStream(file);
+                wb_stopwatch=new HSSFWorkbook(fileInputStream);
+            }
+            catch(Exception e){
+                Log.e("TimerActivity","Error: "+e.toString());
+            }
+            Stopwatch.RowNumber+=3;
+            return wb_stopwatch;
+        }
+		wb_stopwatch = new HSSFWorkbook();
+        Cell c;
 
         //Cell style for header row
         CellStyle cs = wb_stopwatch.createCellStyle();
@@ -153,7 +177,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
         cs.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 
         //New Sheet
-        Sheet sheet1 = null;
+        Sheet sheet1;
         sheet1 = wb_stopwatch.createSheet("Rapport_Agents");
 
         // Generate column headings
@@ -168,9 +192,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
         sheet1.setColumnWidth(0, (15 * 700));
         sheet1.setColumnWidth(1, (15 * 500));
 
-        File folder = new File(context.getExternalFilesDir(null),"");
-        folder.mkdirs();
-        File file = new File(folder,"Rapport_Chronos.xls");
+
         try {
             file.createNewFile();
 
@@ -376,7 +398,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 				stopwatch2.reset();
 				stopwatch2=fetchPrevStopwatch(stopwatch2.id);
 				getContentResolver().delete(URI, Stopwatches.STOPWATCH_ID+"="+thisStopwatchId, null);
-				showToast("Chornomètre '"+thisStopwatchTitle+"' supprimé.");
+				showToast("Chronomètre '"+thisStopwatchTitle+"' supprimé.");
 				
 		    	if(nextStopwatchExists(stopwatch2.id)) {
 		    		stopwatch3=fetchNextStopwatch(stopwatch2.id);
@@ -578,9 +600,9 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 		contentValues.put(Stopwatch.Stopwatches.RUNNING, false);
 		stopwatch.id=Integer.parseInt(this.getContentResolver().insert(URI, contentValues).getPathSegments().get(1));
 		if(stopwatch.id==1) 
-			stopwatch.title="Chrnomètre #1 (tapez pour changer)";
+			stopwatch.title="Chronomètre #1 (tapez pour changer)";
 		else
-			stopwatch.title="Chrnomètre #"+stopwatch.id;
+			stopwatch.title="Chronomètre #"+stopwatch.id;
 		Stopwatch.updateStopwatchRecord(stopwatch,StopwatchActivity.this,URI);
 		return(stopwatch);
 	}
