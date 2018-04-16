@@ -20,9 +20,10 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.google.android.gms:play-services-ads:9.2.1'
+    compile 'com.google.android.gms:play-services-ads:15.0.0'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
+    compile 'com.google.android.gms:play-services-drive:15.0.0'
     implementation files('poi-3.9/poi-3.9-20121203.jar')
     implementation files('poi-3.9/poi-examples-3.9-20121203.jar')
     implementation files('poi-3.9/poi-excelant-3.9-20121203.jar')

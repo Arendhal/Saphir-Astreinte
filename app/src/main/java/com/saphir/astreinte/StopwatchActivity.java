@@ -148,7 +148,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
    		CreateWorkbook(this);
 
 	}
-    public  Workbook CreateWorkbook(Context context){
+    public Workbook CreateWorkbook(Context context){
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy-hh-mm");
         Date date = Calendar.getInstance().getTime();
         strDate=sdf.format(date);
@@ -214,6 +214,11 @@ public class StopwatchActivity extends Activity implements OnClickListener {
       return wb_stopwatch;
     }
 
+    public static File getFile(){
+        File folder = new File(MainActivity.context.getExternalFilesDir(null),"");
+        File file = new File(folder,"RapportChronos_"+strDate+".xls");
+        return file;
+	}
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 	    if (keyCode == KeyEvent.KEYCODE_VOLUME_UP && sharedPrefs.getString("volumeButtonsPref", getString(R.string.volumeButtonsPrefDefaultValue)).equals("0")) 

@@ -12,11 +12,13 @@ import android.os.PowerManager;
 import android.os.Vibrator;
 import android.util.Log;
 
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.saphir.astreinte.MainActivity;
 import com.saphir.astreinte.R;
 import com.saphir.astreinte.Timer;
 import com.saphir.astreinte.Timer.Timers;
 import com.saphir.astreinte.TimerActivity;
+import com.saphir.astreinte.UploadToDrive;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.util.HSSFColor;
@@ -135,7 +137,7 @@ public class TimerExpiry extends BroadcastReceiver
 	    			Timer.putTimerExpiredNotification(context, timer.title, timer.interval, timer.intervalParentId, new Date(timer.stopTime));		            
 		    		MainActivity.addOrRemoveMainNotification(context,false);
 		    		TimerWriteToFile(context,TimerActivity.wb_timer,Timer.length,formatElapsedTime(Timer.length));
-	    		}
+                }
 	    		else {
 	    			Intent intent = new Intent(MainActivity.class.getPackage().getName()+".timer_expired");
 	    			intent.putExtra(Timer.Timers.TIMER_ID, timer.id);
@@ -197,6 +199,7 @@ public class TimerExpiry extends BroadcastReceiver
 	    	}  
 	    });
 	    myThread.start();
+
     }
 
     public int getStatus(long ElapsedMillis){
@@ -313,33 +316,5 @@ public class TimerExpiry extends BroadcastReceiver
         return str;
     }
 
-    public static String formatTime(Timer timer){
-        Cursor cursor = MainActivity.context.getContentResolver().query(
-                Timers.CONTENT_URI,
-                new String[] {Timers.TIMER_ID},
-                Timers.INTERVAL_PARENT_ID+"="+timer.intervalParentId+" and "+Timers.LENGTH+"<>0",
-                null,
-                null);
-        int countIntervals = cursor.getCount();
-        cursor.close();
-
-        String elapsedTimeString="";
-        SimpleDateFormat sdf = new SimpleDateFormat(MainActivity.context.getResources().getString(R.string.date_time_format));
-        long elapsedtime=timer.stopTime-timer.startTime;
-        long seconds= elapsedtime/1000;
-        long mins= seconds/60;
-        long hours=mins/60;
-
-
-        if(countIntervals==1) {
-            elapsedTimeString = "Compte a rebours '" + timer.title + "' expiré le " + sdf.format(timer.stopTime) + ".\n";
-            elapsedTimeString += "Compte a rebours:" + timer.title + ": Temps écoulé :" + hours % 24 + "H " + mins % 60 + "m " + seconds % 60 + "s.\n";
-        }
-        else{
-            elapsedTimeString = "Compte a rebours '" + timer.title + "' expiré le " + sdf.format(timer.stopTime) + ".\n";
-            elapsedTimeString += "Compte a rebours '" + timer.title + "', Intervalle #" + timer.interval + " expiré à " + sdf.format(timer.stopTime) + ".\n";
-        }
-        return elapsedTimeString;
-    }
 }
 

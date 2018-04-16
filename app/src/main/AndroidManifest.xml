@@ -66,6 +66,11 @@
 			android:launchMode="singleTop" >
 		</activity>
 
+		<activity
+			android:name="com.saphir.astreinte.UploadToDrive"
+			android:launchMode="singleTop">
+		</activity>
+
 		<receiver
 			android:name="com.saphir.astreinte.receivers.TimerExpiry">
 		</receiver>

@@ -256,6 +256,12 @@ public class TimerActivity extends Activity implements OnClickListener {
         return  wb_timer;
     }
 
+    public static File getFile(){
+        File folder = new File(MainActivity.context.getExternalFilesDir(null),"");
+        File file = new File(folder,"RapportTimers_"+strDate+".xls");
+        return file;
+    }
+
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 	    if (keyCode == KeyEvent.KEYCODE_VOLUME_UP && sharedPrefs.getString("volumeButtonsPref", getString(R.string.volumeButtonsPrefDefaultValue)).equals("0")) 
 	    {

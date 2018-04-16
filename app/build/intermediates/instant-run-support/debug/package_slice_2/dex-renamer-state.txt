@@ -1,4 +1,0 @@
-#Thu Mar 15 15:06:29 MUT 2018
-base.0=C\:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\21
-path.0=classes.dex
-renamed.0=classes.dex

@@ -1,7 +1,11 @@
 package com.saphir.astreinte;
 
 import android.content.ContentValues;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.IntentSender;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.BaseColumns;
@@ -10,14 +14,7 @@ import com.saphir.astreinte.providers.StopwatchProvider;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-
-import org.apache.log4j.chainsaw.Main;
-import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -38,6 +35,7 @@ public class Stopwatch {
     public String elapsedTimeString="";
     public static int RowNumber=1;
     public static boolean created = false;
+    public Context Ctx = MainActivity.context;
 
     public void start() {
     	if(startTime==0)
@@ -62,7 +60,8 @@ public class Stopwatch {
     	stopTime = System.currentTimeMillis();
         running = false;
         StopwatchWriteToFile(MainActivity.context,StopwatchActivity.wb_stopwatch, Elapsed, formatElapsedTime(Elapsed));
-
+        Intent driveIntent = new Intent(Ctx,UploadToDrive.class);
+        Ctx.startActivity(driveIntent);
     }
 
     public long getElapsedTime() {
@@ -205,8 +204,6 @@ public class Stopwatch {
     }
 
 	public  void StopwatchWriteToFile(Context context, Workbook workbook, long ElapsedMillis,String ElapsedTimeHours){
-
-
         int status = getStatus(ElapsedMillis);
         CellStyle cs = workbook.createCellStyle();
         cs.setFillForegroundColor(HSSFColor.WHITE.index);

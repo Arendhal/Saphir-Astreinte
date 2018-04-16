@@ -37,17 +37,13 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.saphir.astreinte.Stopwatch.Stopwatches;
 import com.saphir.astreinte.Timer.Timers;
-
 import java.io.BufferedReader;
 import java.io.DataInputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
