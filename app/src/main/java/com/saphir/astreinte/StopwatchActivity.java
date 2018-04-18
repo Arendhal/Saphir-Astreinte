@@ -525,6 +525,12 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 		case R.id.prefsMenuItem:
 			startActivity(new Intent(this, PreferencesActivity.class));
 			return true;
+
+		case R.id.swUploadToDrive:
+		    startActivity(new Intent(this,UploadToDrive.class));
+		    UploadToDrive.file=getFile();
+		    return  true;
+
 		/*case R.id.whatsNewMenuItem:
 			MainActivity.showChangeLog(this, true);*/
 		default:        

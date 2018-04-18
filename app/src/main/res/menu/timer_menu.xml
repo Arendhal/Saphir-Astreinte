@@ -2,5 +2,5 @@
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/timerStopAllMenuItem" android:title="Arreter tout Timers" android:icon="@drawable/timer_stop" android:titleCondensed="Stop All"></item>
-
+    <item android:id="@+id/timerUploadToDrive" android:title="Upload des données"  android:titleCondensed="Upload"></item>
 </menu>

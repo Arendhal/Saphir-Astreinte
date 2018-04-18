@@ -4,212 +4,182 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.drive.CreateFileActivityOptions;
 import com.google.android.gms.drive.Drive;
-import com.google.android.gms.drive.DriveApi;
 import com.google.android.gms.drive.DriveApi.DriveContentsResult;
+import com.google.android.gms.drive.DriveClient;
 import com.google.android.gms.drive.DriveContents;
-import com.google.android.gms.drive.DriveFolder;
 import com.google.android.gms.drive.DriveFolder.DriveFileResult;
 import com.google.android.gms.drive.DriveId;
 import com.google.android.gms.drive.DriveResource;
+import com.google.android.gms.drive.DriveResourceClient;
 import com.google.android.gms.drive.Metadata;
 import com.google.android.gms.drive.MetadataChangeSet;
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+
 import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class UploadToDrive extends Activity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener  {
+public class UploadToDrive extends Activity   {
 
     public static final String TAG = "UploadToDrive";
     public static final int REQUEST_CODE = 101;
-    public File ChronoFile;
-    public File TimerFile;
-    public static GoogleApiClient googleApiClient;
+    private static final int REQUEST_CODE_SIGN_IN = 9001;
+    private static final int REQUEST_CODE_CREATOR = 2;
+    private static final int REQUEST_CODE_QUIT = 1;
+    private boolean saved = false;
+    public  static File file;
+    private GoogleSignInClient mGoogleSignInClient;
+    private DriveClient mDriveClient;
+    private DriveResourceClient mDriveResourceClient;
 
-    public static String drive_ID;
-    public static DriveId driveId;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        ChronoFile = StopwatchActivity.getFile();
-        TimerFile = TimerActivity.getFile();
-        buildGoogleApiClient();
+        saved=false;
+
+        signIn();
+    }
+    private void signIn() {
+        Log.i(TAG, "Start sign in");
+        mGoogleSignInClient = buildGoogleSignInClient();
+        startActivityForResult(mGoogleSignInClient.getSignInIntent(), REQUEST_CODE_SIGN_IN);
     }
 
-    @Override
-    public void onStart(){
-        super.onStart();
-        Log.i(TAG,"Starting and connecting");
-        googleApiClient.connect();
+    /** Build a Google SignIn client. */
+    private GoogleSignInClient buildGoogleSignInClient() {
+        GoogleSignInOptions signInOptions =
+                new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                        .requestScopes(Drive.SCOPE_FILE)
+                        .build();
+        return GoogleSignIn.getClient(this, signInOptions);
     }
 
-    @Override
-    public void onStop(){
-        super.onStop();
-        if(googleApiClient != null){
-            Log.i(TAG,"Stopping and disconnecting");
-            googleApiClient.disconnect();
+    /** Create a new file and save it to Drive. */
+    private void saveFileToDrive(final File file) {
+        // Start by creating a new contents, and setting a callback.
+        Log.i(TAG, "Creating new contents.");
+
+        mDriveResourceClient
+                .createContents()
+                .continueWithTask(
+                        new Continuation<DriveContents, Task<Void>>() {
+                            @Override
+                            public Task<Void> then(@NonNull Task<DriveContents> task) throws Exception {
+                                return createFileIntentSender(task.getResult(), file);
+                            }
+                        })
+                .addOnFailureListener(
+                        new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Failed to create new contents.", e);
+                            }
+                        });
+    }
+
+    private Task<Void> createFileIntentSender(DriveContents driveContents, File File) {
+        Log.i(TAG, "New contents created.");
+        // Get an output stream for the contents.
+        OutputStream outputStream = driveContents.getOutputStream();
+
+        // Write the bitmap data from it.
+        addFileToOutputStream(outputStream,File);
+        byte[] buffer = new byte[1024];
+        try {
+            outputStream.write(buffer);
+        } catch (IOException e) {
+            Log.w(TAG, "Unable to write file contents.", e);
         }
+        // Create the initial metadata - MIME type and title.
+        // Note that the user will be able to change the title later.
+        MetadataChangeSet metadataChangeSet =
+                new MetadataChangeSet.Builder()
+                        .setMimeType("application/vnd.ms-excel")
+                        .setTitle(File.getName())
+                        .build();
+        // Set up options to configure and display the create file activity.
+        CreateFileActivityOptions createFileActivityOptions =
+                new CreateFileActivityOptions.Builder()
+                        .setInitialMetadata(metadataChangeSet)
+                        .setInitialDriveContents(driveContents)
+                        .build();
+
+        return mDriveClient
+                .newCreateFileActivityIntentSender(createFileActivityOptions)
+                .continueWith(
+                        new Continuation<IntentSender, Void>() {
+                            @Override
+                            public Void then(@NonNull Task<IntentSender> task) throws Exception {
+                                startIntentSenderForResult(task.getResult(), REQUEST_CODE_CREATOR, null, 0, 0, 0);
+                                return null;
+                            }
+                        });
     }
 
+
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
-            Log.i(TAG, "onActivityResult() and connecting");
-            googleApiClient.connect();
-        }
-    }
+       if(!saved) {
+           Log.i(TAG, "Sign in request code");
+           // Called after user is signed in.
+           if (resultCode == RESULT_OK) {
+               Log.i(TAG, "Signed in successfully.");
+               // Use the last signed in account here since it already have a Drive scope.
+               mDriveClient = Drive.getDriveClient(this, GoogleSignIn.getLastSignedInAccount(this));
+               // Build a drive resource client.
+               mDriveResourceClient =
+                       Drive.getDriveResourceClient(this, GoogleSignIn.getLastSignedInAccount(this));
+               saveFileToDrive(file);
+               saved=true;
+           }
+       }
+          if(saved) {
+              Log.i(TAG, "already saved");
+              // Called after a file is saved to Drive.
+              Intent intent = new Intent(this, MainActivity.class);
+              startActivity(intent);
 
-    @Override
-    public void onConnected(@Nullable Bundle bundle) {
-        Log.i(TAG,"onConnected and connected");
-        Drive.DriveApi.newDriveContents(googleApiClient).setResultCallback(driveContentsCallback);
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-        switch(i){
-            case 1:
-                Log.i(TAG, "Connection suspended : " + "Service disconnected");
-                break;
-            case 2:
-                Log.i(TAG, "Connection suspended : " + "Connection lost");
-                break;
-            default:
-                Log.i(TAG, "Connection suspended : " + "Unknown");
-                break;
+          }
         }
 
-    }
-
-    final private ResultCallback<DriveContentsResult> driveContentsCallback = new ResultCallback<DriveContentsResult>() {
-        @Override
-        public void onResult(@NonNull DriveContentsResult driveContentsResult) {
-            if(!driveContentsResult.getStatus().isSuccess()){
-                Log.e(TAG,"Error creating new file");
-                return;
-            }
-
-            final DriveContents driveContents = driveContentsResult.getDriveContents();
-            new Thread(){
-                @Override
-                public void run(){
-                    OutputStream outputStream = driveContents.getOutputStream();
-                    OutputStream outputStream2 = driveContents.getOutputStream();
-                    addChronoFileToOutputStream(outputStream);
-                    addTimerFileToOutputStream(outputStream2);
-
-                    MetadataChangeSet changeSet = new MetadataChangeSet.Builder()
-                            .setTitle("File")
-                            .setMimeType("application/vnd.ms-excel")
-                            .setDescription("File uploaded from device")
-                            .setStarred(true).build();
-                    Drive.DriveApi.getRootFolder(googleApiClient).createFile(googleApiClient,changeSet,driveContents)
-                            .setResultCallback(fileCallback);
-                }
-            }.start();
-        }
-    };
-
-    private void addChronoFileToOutputStream(OutputStream outputStream){
-        Log.i(TAG,"Adding file to output stream");
+    private void addFileToOutputStream(OutputStream outputStream,File file) {
+        Log.i(TAG, "adding text file to outputstream...");
         byte[] buffer = new byte[1024];
         int bytesRead;
-        try{
-            BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(ChronoFile));
-            while((bytesRead = inputStream.read(buffer)) != -1 )
-            {
-                outputStream.write(buffer,0,bytesRead);
+        try {
+            BufferedInputStream inputStream = new BufferedInputStream(
+                    new FileInputStream(file));
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);
             }
-
-        }catch (IOException e) {
-            Log.e(TAG,"Error adding file : "+e.toString());
+        } catch (IOException e) {
+            Log.i(TAG, "problem converting input stream to output stream: " + e);
+            e.printStackTrace();
         }
     }
 
-    private void addTimerFileToOutputStream(OutputStream outputStream){
-        Log.i(TAG,"Adding file to output stream");
-        byte[] buffer = new byte[1024];
-        int bytesRead;
-        try{
-            BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(TimerFile));
-            while((bytesRead = inputStream.read(buffer)) != -1 )
-            {
-                outputStream.write(buffer,0,bytesRead);
-            }
-
-        }catch (IOException e) {
-            Log.e(TAG,"Error adding file : "+e.toString());
-        }
-    }
-
-
-    final private ResultCallback<DriveFileResult> fileCallback = new ResultCallback<DriveFileResult>() {
-        @Override
-        public void onResult(@NonNull DriveFileResult driveFileResult) {
-            if(!driveFileResult.getStatus().isSuccess()){
-                Log.e(TAG,"Error creating file");
-                Toast.makeText(UploadToDrive.this,"Error adding file to drive",Toast.LENGTH_LONG).show();
-                return;
-            }
-            Log.i(TAG,"File Added to drive");
-            Log.i(TAG,"Created file :"+driveFileResult.getDriveFile().getDriveId());
-            Toast.makeText(UploadToDrive.this,"Successfully added file to drive",Toast.LENGTH_LONG).show();
-
-            final PendingResult<DriveResource.MetadataResult> metadata = driveFileResult.getDriveFile().getMetadata(googleApiClient);
-            metadata.setResultCallback(new ResultCallback<DriveResource.MetadataResult>() {
-                @Override
-                public void onResult(@NonNull DriveResource.MetadataResult metadataResult) {
-                    Metadata data = metadataResult.getMetadata();
-                    Log.i(TAG, "Title: " + data.getTitle());drive_ID = data.getDriveId().encodeToString();
-                    Log.i(TAG, "DrivId: " + drive_ID);
-                    driveId = data.getDriveId();
-                    Log.i(TAG, "Description: " + data.getDescription().toString());
-                    Log.i(TAG, "MimeType: " + data.getMimeType());
-                    Log.i(TAG, "File size: " + String.valueOf(data.getFileSize()));
-                }
-            });
-        }
-    };
-
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        Log.i(TAG,"Connetion Failed");
-        if(connectionResult.hasResolution()){
-            GooglePlayServicesUtil.getErrorDialog(connectionResult.getErrorCode(),this,0).show();
-            return;
-        }
-
-        try{
-            Log.i(TAG,"Trying to reolve connection failed");
-            connectionResult.startResolutionForResult(this,REQUEST_CODE);
-        }catch(IntentSender.SendIntentException e){
-            Log.e(TAG,"Exception while starting resolution : "+e.toString());
-        }
-    }
-
-    private void buildGoogleApiClient(){
-        if(googleApiClient == null){
-            googleApiClient = new GoogleApiClient.Builder(this)
-                    .addApi(Drive.API)
-                    .addScope(Drive.SCOPE_FILE)
-                    .addConnectionCallbacks(this)
-                    .addOnConnectionFailedListener(this)
-                    .build();
-        }
-    }
 }

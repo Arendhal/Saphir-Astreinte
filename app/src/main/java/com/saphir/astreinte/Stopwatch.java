@@ -60,8 +60,6 @@ public class Stopwatch {
     	stopTime = System.currentTimeMillis();
         running = false;
         StopwatchWriteToFile(MainActivity.context,StopwatchActivity.wb_stopwatch, Elapsed, formatElapsedTime(Elapsed));
-        Intent driveIntent = new Intent(Ctx,UploadToDrive.class);
-        Ctx.startActivity(driveIntent);
     }
 
     public long getElapsedTime() {
