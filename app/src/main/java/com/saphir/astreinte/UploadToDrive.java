@@ -44,10 +44,8 @@ import java.io.OutputStream;
 public class UploadToDrive extends Activity   {
 
     public static final String TAG = "UploadToDrive";
-    public static final int REQUEST_CODE = 101;
     private static final int REQUEST_CODE_SIGN_IN = 9001;
     private static final int REQUEST_CODE_CREATOR = 2;
-    private static final int REQUEST_CODE_QUIT = 1;
     private boolean saved = false;
     public  static File file;
     private GoogleSignInClient mGoogleSignInClient;
@@ -167,7 +165,7 @@ public class UploadToDrive extends Activity   {
         }
 
     private void addFileToOutputStream(OutputStream outputStream,File file) {
-        Log.i(TAG, "adding text file to outputstream...");
+        Log.i(TAG, "adding excel file to outputstream");
         byte[] buffer = new byte[1024];
         int bytesRead;
         try {

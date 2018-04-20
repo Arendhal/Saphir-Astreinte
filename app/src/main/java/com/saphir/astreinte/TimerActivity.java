@@ -131,7 +131,10 @@ public class TimerActivity extends Activity implements OnClickListener {
 	private Handler timer3Handler = null;
 	private RealView realView = null;
 	private boolean deleteTimer = false;
-	
+	private long startTime1 = 0;
+	private long startTime2 = 0;
+	private long computedTime = 0;
+
 	private Handler screenSwitchHandler = null;
 	private Handler timePlusMinusLongPressHandler = null;
 
@@ -260,6 +263,27 @@ public class TimerActivity extends Activity implements OnClickListener {
         File folder = new File(MainActivity.context.getExternalFilesDir(null),"");
         File file = new File(folder,"RapportTimers_"+strDate+".xls");
         return file;
+    }
+
+    public long getCurrentTime(){
+        long currentTime = Calendar.getInstance().getTimeInMillis();
+        return  currentTime;
+    }
+
+    public long getTimeBetweenStarts(long startTime1, long startTime2){
+        return startTime2-startTime1;
+    }
+
+    public void resetStartTime(){
+        startTime1=0;
+        startTime2=0;
+    }
+
+    public String formatTime(long ms){
+        long sec = ms/1000;
+        long mn = sec/60;
+        long h = mn/60;
+        return ""+h%24+" h"+mn%60+" m"+sec%60+" s";
     }
 
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -1547,10 +1571,16 @@ public class TimerActivity extends Activity implements OnClickListener {
 					timer2UI.timerStartStopResumeButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_media_pause,0,0,0);
 					timer2.resume=true;
 					timer2.start();
+					startTime2=getCurrentTime();
 					Timer.addAlarmManager(TimerActivity.this, timer2);
 					Timer.updateTimerRecord(false,false,timer2,TimerActivity.this,URI);
 					timer2UI.timerProgressBar.setVisibility(View.VISIBLE);
 					timer2Handler.post(timer2UpdateTimeTask);
+					if(startTime1 !=0  && startTime2 != 0) {
+                        computedTime = getTimeBetweenStarts(startTime1, startTime2);
+                        Toast.makeText(this,"Temps ecoule depuis dernier intervalle : "+formatTime(computedTime),Toast.LENGTH_LONG).show();
+                        resetStartTime();
+					}
 				}
 				else if(timer2.length>0) {
 					timer2UI.timerStartStopResumeButton.setText("Reprendre");
@@ -1562,6 +1592,8 @@ public class TimerActivity extends Activity implements OnClickListener {
 					timer2Handler.removeCallbacks(timer2UpdateTimeTask);
 					timer2UI.timerProgressBar.setVisibility(View.GONE);
 					setTime(timer2UI,timer2);
+					startTime1=getCurrentTime();
+					//ShowComputedTime()
 				}
 				else if(timer2.length<=0) {
 					showToast("Ce compte a rebours n'a pas de durée. Vous pouvez en ajouter avec le bouton +.");
@@ -1571,6 +1603,7 @@ public class TimerActivity extends Activity implements OnClickListener {
 				timer2UI.timerStartStopResumeButton.setText("Commencer");
 				timer2UI.timerStartStopResumeButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_media_play,0,0,0);
 				timer2.reset();
+				startTime1=getCurrentTime();
 				Timer.removeAlarmManager(TimerActivity.this, timer2);
 				resetAllOtherIntervals();
 				Timer.updateTimerRecord(false,false,timer2,TimerActivity.this,URI);
