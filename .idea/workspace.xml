@@ -6,6 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="blah" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -69,34 +70,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimerExpiry.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/receivers/TimerExpiry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="787">
-              <caret line="320" column="0" lean-forward="false" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TimerActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="285" column="18" lean-forward="false" selection-start-line="285" selection-start-column="18" selection-end-line="285" selection-end-column="18" />
+            <state relative-caret-position="265">
+              <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
               <folding>
                 <element signature="class#TimerUI#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#CreateWorkbook#0;class#TimerActivity#0" expanded="false" />
+                <element signature="method#getFile#0;class#TimerActivity#0" expanded="false" />
+                <element signature="method#getCurrentTime#0;class#TimerActivity#0" expanded="false" />
+                <element signature="method#getTimeBetweenStarts#0;class#TimerActivity#0" expanded="false" />
+                <element signature="method#showComputedTime#0;class#TimerActivity#0" expanded="false" />
+                <element signature="method#stopCoundDownTimer#0;class#TimerActivity#0" expanded="false" />
+                <element signature="method#formatTime#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#onKeyDown#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#getBeepResourceId#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#displayBeepPicker#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#convertBeepToFormatedString#0;class#TimerActivity#0" expanded="false" />
-                <element signature="method#onPause#0;class#TimerActivity#0" expanded="false" />
-                <element signature="method#onResume#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#setupTimerViewUI#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#startLeftRightScreenHandlers#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#stopLeftRightScreenHandlers#0;class#TimerActivity#0" expanded="false" />
-                <element signature="method#showToast#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#setupRealViewSwitcher#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#showBeepMediaVolumeToast#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#fetchNextTimer#0;class#TimerActivity#0" expanded="false" />
@@ -112,19 +106,33 @@
                 <element signature="method#getNumIntervals#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#addTimer#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#addInterval#0;class#TimerActivity#0" expanded="false" />
-                <element signature="method#isAnyIntervalForTimerRunning#0;class#TimerActivity#0" expanded="false" />
-                <element signature="method#setupDisplay#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#setTime#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#calculateTime#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#TimerActivity#0" expanded="false" />
+                <element signature="class#47651:48150" expanded="false" />
                 <element signature="method#switchPlusMinusTime#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#receivedBroadcast#0;class#TimerActivity#0" expanded="false" />
+                <element signature="class#TimerActivityBroadcastReceiver#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#dispatchTouchEvent#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#saveTitle#0;class#TimerActivity#0" expanded="false" />
-                <element signature="method#InputFilterMinMax#0;class#InputFilterMinMax#0;class#TimerActivity#0" expanded="false" />
-                <element signature="method#filter#0;class#InputFilterMinMax#0;class#TimerActivity#0" expanded="false" />
-                <element signature="method#isInRange#0;class#InputFilterMinMax#0;class#TimerActivity#0" expanded="false" />
+                <element signature="class#InputFilterMinMax#0;class#TimerActivity#0" expanded="false" />
                 <element signature="method#displayEnterTimeDialog#0;class#TimerActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimerExpiry.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/receivers/TimerExpiry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+              <folding>
+                <element signature="method#getStatus#0;class#TimerExpiry#0" expanded="false" />
+                <element signature="method#setCellStyle#0;class#TimerExpiry#0" expanded="false" />
+                <element signature="method#setStatusInfo#0;class#TimerExpiry#0" expanded="false" />
+                <element signature="method#TimerWriteToFile#0;class#TimerExpiry#0" expanded="false" />
+                <element signature="method#formatElapsedTime#0;class#TimerExpiry#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -133,7 +141,7 @@
       <file leaf-file-name="Timer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/Timer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="93">
               <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
                 <element signature="method#fetchTimerFromDB#0;class#Timer#0" expanded="false" />
@@ -191,8 +199,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tap</find>
-      <find>ads</find>
       <find>ad</find>
       <find>fire</find>
       <find>misc</find>
@@ -221,6 +227,8 @@
       <find>title</find>
       <find>showToast</find>
       <find>format</find>
+      <find>blah</find>
+      <find>vibrate</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
@@ -2208,10 +2216,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/RealView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/providers/StopwatchProvider.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/Timer.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/GoogleSignIcActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/receivers/TimerExpiry.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/Stopwatch.java" />
@@ -2220,13 +2226,15 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/timer_menu.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/UploadToDrive.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/receivers/TimerExpiry.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/Timer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-59" />
-    <option name="y" value="67" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="742" />
+    <option name="y" value="15" />
     <option name="width" value="960" />
     <option name="height" value="1080" />
   </component>
@@ -2344,9 +2352,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
+            <path>
+              <item name="Saphir Astreinte" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Saphir Astreinte" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="Saphir Astreinte" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Saphir Astreinte" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="astreinte" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
             <path>
               <item name="Saphir Astreinte" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -2355,9 +2384,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -2366,13 +2394,14 @@
     <property name="device.picker.selection" value="QLF7N16C01013564" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Properties" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/Dev/Saphir_Mobile" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1524216841149" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1525332293535" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="ExportApk.ApkPath" value="C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
     <property name="ExportApk.SignV2" value="true" />
+    <property name="android.profiler.active" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -2741,7 +2770,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2749,10 +2778,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.50586355" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32230523" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2678762" sideWeight="0.49413645" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2760,23 +2789,23 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39701173" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39701173" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24332978" sideWeight="0.49253732" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31343284" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31343284" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272921" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32657418" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2827,60 +2856,48 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/Timer.java</url>
-          <line>247</line>
-          <properties />
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/Timer.java</url>
           <line>79</line>
           <properties />
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java</url>
-          <line>1573</line>
-          <properties />
-          <option name="timeStamp" value="215" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java</url>
-          <line>1574</line>
-          <properties />
-          <option name="timeStamp" value="222" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java</url>
-          <line>1605</line>
+          <line>1650</line>
           <properties />
           <option name="timeStamp" value="224" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java</url>
-          <line>1606</line>
+          <line>1625</line>
           <properties />
-          <option name="timeStamp" value="225" />
+          <option name="timeStamp" value="238" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java</url>
-          <line>1579</line>
+          <line>1617</line>
           <properties />
-          <option name="timeStamp" value="226" />
+          <option name="timeStamp" value="249" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java</url>
-          <line>1581</line>
+          <line>309</line>
           <properties />
-          <option name="timeStamp" value="229" />
+          <option name="timeStamp" value="254" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java</url>
-          <line>1578</line>
+          <line>313</line>
           <properties />
-          <option name="timeStamp" value="231" />
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java</url>
+          <line>310</line>
+          <properties />
+          <option name="timeStamp" value="262" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="233" />
+      <option name="time" value="264" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2896,13 +2913,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/timer_time_entry.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/icon.png" />
@@ -2970,13 +2987,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/preferences.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Downloads/StopTimer-master/StopTimer-master/app/src/main/java/com/saphir/astreinte/Timer.java" />
@@ -3016,33 +3033,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="50" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/stopwatch.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/stopwatch.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1139">
           <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-port/stopwatch.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-port/stopwatch.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
@@ -3060,13 +3077,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main_menu.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/providers/StopwatchProvider.java">
@@ -3092,16 +3109,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="34" lean-forward="false" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/Dev/StageApp/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -3143,13 +3150,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/timer_menu.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -3166,13 +3173,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/stopwatch_menu.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="67" lean-forward="false" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/MainActivity.java">
@@ -3198,6 +3205,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/UploadToDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding>
+            <element signature="method#addFileToOutputStream#0;class#UploadToDrive#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/StopwatchActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5168">
@@ -3216,19 +3233,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/UploadToDrive.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        <state relative-caret-position="459">
+          <caret line="33" column="34" lean-forward="false" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/receivers/TimerExpiry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
           <folding>
-            <element signature="method#addFileToOutputStream#0;class#UploadToDrive#0" expanded="false" />
+            <element signature="method#getStatus#0;class#TimerExpiry#0" expanded="false" />
+            <element signature="method#setCellStyle#0;class#TimerExpiry#0" expanded="false" />
+            <element signature="method#setStatusInfo#0;class#TimerExpiry#0" expanded="false" />
+            <element signature="method#TimerWriteToFile#0;class#TimerExpiry#0" expanded="false" />
+            <element signature="method#formatElapsedTime#0;class#TimerExpiry#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="93">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
             <element signature="method#fetchTimerFromDB#0;class#Timer#0" expanded="false" />
@@ -3242,31 +3274,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/receivers/TimerExpiry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="320" column="0" lean-forward="false" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/saphir/astreinte/TimerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="285" column="18" lean-forward="false" selection-start-line="285" selection-start-column="18" selection-end-line="285" selection-end-column="18" />
+        <state relative-caret-position="265">
+          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
           <folding>
             <element signature="class#TimerUI#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#CreateWorkbook#0;class#TimerActivity#0" expanded="false" />
+            <element signature="method#getFile#0;class#TimerActivity#0" expanded="false" />
+            <element signature="method#getCurrentTime#0;class#TimerActivity#0" expanded="false" />
+            <element signature="method#getTimeBetweenStarts#0;class#TimerActivity#0" expanded="false" />
+            <element signature="method#showComputedTime#0;class#TimerActivity#0" expanded="false" />
+            <element signature="method#stopCoundDownTimer#0;class#TimerActivity#0" expanded="false" />
+            <element signature="method#formatTime#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#onKeyDown#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#getBeepResourceId#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#displayBeepPicker#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#convertBeepToFormatedString#0;class#TimerActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#TimerActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#setupTimerViewUI#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#startLeftRightScreenHandlers#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#stopLeftRightScreenHandlers#0;class#TimerActivity#0" expanded="false" />
-            <element signature="method#showToast#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#setupRealViewSwitcher#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#showBeepMediaVolumeToast#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#fetchNextTimer#0;class#TimerActivity#0" expanded="false" />
@@ -3282,18 +3309,16 @@
             <element signature="method#getNumIntervals#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#addTimer#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#addInterval#0;class#TimerActivity#0" expanded="false" />
-            <element signature="method#isAnyIntervalForTimerRunning#0;class#TimerActivity#0" expanded="false" />
-            <element signature="method#setupDisplay#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#setTime#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#calculateTime#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#TimerActivity#0" expanded="false" />
+            <element signature="class#47651:48150" expanded="false" />
             <element signature="method#switchPlusMinusTime#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#receivedBroadcast#0;class#TimerActivity#0" expanded="false" />
+            <element signature="class#TimerActivityBroadcastReceiver#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#dispatchTouchEvent#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#saveTitle#0;class#TimerActivity#0" expanded="false" />
-            <element signature="method#InputFilterMinMax#0;class#InputFilterMinMax#0;class#TimerActivity#0" expanded="false" />
-            <element signature="method#filter#0;class#InputFilterMinMax#0;class#TimerActivity#0" expanded="false" />
-            <element signature="method#isInRange#0;class#InputFilterMinMax#0;class#TimerActivity#0" expanded="false" />
+            <element signature="class#InputFilterMinMax#0;class#TimerActivity#0" expanded="false" />
             <element signature="method#displayEnterTimeDialog#0;class#TimerActivity#0" expanded="false" />
           </folding>
         </state>

@@ -100,6 +100,7 @@ public class Timer {
     }
 
 
+
     public static Timer fetchTimerFromDB(Context context, Uri URI, int timerId) {
     	Timer timer = null;
     	

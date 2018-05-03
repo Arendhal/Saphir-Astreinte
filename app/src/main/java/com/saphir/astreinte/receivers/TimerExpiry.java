@@ -45,7 +45,7 @@ public class TimerExpiry extends BroadcastReceiver
     @Override
     public void onReceive(final Context context, final Intent intent) 
     {
-		//Log.d("blah","TimerExpiry onReceive()");
+		Log.d("blah","TimerExpiry onReceive()");
 
 	    //this background thread is created so that ActivityManager.RunningAppProcessInfo works correctly,
 		// ActivityManager.RunningAppProcessInfo will always be IMPORTANCE_FOREGROUND if onReceive is still executing!

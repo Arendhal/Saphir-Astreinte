@@ -15,7 +15,9 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.preference.EditTextPreference;
 import android.text.Editable;
 import android.text.InputFilter;
@@ -60,6 +62,7 @@ import java.util.HashMap;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.ss.formula.functions.Count;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Row;
@@ -130,6 +133,7 @@ public class TimerActivity extends Activity implements OnClickListener {
 	private Handler timer2Handler = null;
 	private Handler timer3Handler = null;
 	private RealView realView = null;
+	private CountDownTimer CdT =null;
 	private boolean deleteTimer = false;
 	private long startTime1 = 0;
 	private long startTime2 = 0;
@@ -271,19 +275,59 @@ public class TimerActivity extends Activity implements OnClickListener {
     }
 
     public long getTimeBetweenStarts(long startTime1, long startTime2){
-        return startTime2-startTime1;
-    }
-
-    public void resetStartTime(){
+        long result = startTime2-startTime1;
         startTime1=0;
         startTime2=0;
+        return result;
     }
+
+    public void showComputedTime(){
+        AlertDialog alertdialog = new AlertDialog.Builder(this).create();
+        alertdialog.setTitle("Temps ecoulé depuis derniere mission");
+        alertdialog.setMessage("Il s'est ecoulé "+formatTime(computedTime)+"\n"+"Merci de respecter les accords entreprise et les 24H de repos consécutifs.");
+        alertdialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertdialog.show();
+    }
+
+    public CountDownTimer countDownHalfHour(){
+    	final Vibrator vibrate = (Vibrator) MainActivity.context.getSystemService(Context.VIBRATOR_SERVICE);
+    	long halfHour=1800000;
+    	long sec=1000;
+    	final long vibrateTime=15000;
+    	CdT = new CountDownTimer(halfHour,sec) {
+    		@Override
+			public void onTick(long millisUntilFinished) {
+    			Log.i("blah","Timer is ticking..."+millisUntilFinished);
+    		}
+    		@Override
+			public void onFinish() {
+    			vibrate.vibrate(vibrateTime);
+    			CdT.start();
+
+    		}
+    	}.start();
+    	return CdT;
+    }
+
+    public void stopCoundDownTimer(CountDownTimer cdt){
+    	if(cdt != null) {
+			cdt.cancel();
+		}
+		else
+			return;
+	}
 
     public String formatTime(long ms){
         long sec = ms/1000;
         long mn = sec/60;
         long h = mn/60;
-        return ""+h%24+" h"+mn%60+" m"+sec%60+" s";
+        return ""+h%24+"H "+mn%60+"m "+sec%60+"s";
     }
 
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -418,7 +462,7 @@ public class TimerActivity extends Activity implements OnClickListener {
 	};
 
     public void onPause() {
-    	Log.e("blah",this.getClass().getSimpleName()+" onPause called");
+    	//Log.e("blah",this.getClass().getSimpleName()+" onPause called");
 
     	super.onPause();
     	
@@ -429,10 +473,12 @@ public class TimerActivity extends Activity implements OnClickListener {
 		timer3Handler.removeCallbacks(timer3UpdateTimeTask);
         
 		this.unregisterReceiver(this.timerActivityBroadcastReceiver);
+		//timer2.stopTime=startTime1;
 
     }
     
     public void onResume() {
+        Log.e("blah",this.getClass().getSimpleName()+" onResume called");
     	super.onResume();
 		sharedPrefsEditor.putInt("LastMainActivity", ACTIVITY_TAB_NUMBER);
 		sharedPrefsEditor.commit();
@@ -469,7 +515,7 @@ public class TimerActivity extends Activity implements OnClickListener {
 		setupRealViewSwitcher();
 	
 		timer2UI.timerTitleEditText.addTextChangedListener(titleTextWatcher);
-
+        startTime2=timer2.stopTime;
     }
     
     private void setupTimerViewUI(View v, final TimerUI ui) {
@@ -618,9 +664,7 @@ public class TimerActivity extends Activity implements OnClickListener {
     }
     
     private void showToast(String text) {
-		toast.cancel();
-		toast.setText(text);
-		toast.show();
+		Toast.makeText(this,text,Toast.LENGTH_LONG).show();
     }
     
     
@@ -1571,6 +1615,7 @@ public class TimerActivity extends Activity implements OnClickListener {
 					timer2UI.timerStartStopResumeButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_media_pause,0,0,0);
 					timer2.resume=true;
 					timer2.start();
+					countDownHalfHour();
 					startTime2=getCurrentTime();
 					Timer.addAlarmManager(TimerActivity.this, timer2);
 					Timer.updateTimerRecord(false,false,timer2,TimerActivity.this,URI);
@@ -1578,8 +1623,7 @@ public class TimerActivity extends Activity implements OnClickListener {
 					timer2Handler.post(timer2UpdateTimeTask);
 					if(startTime1 !=0  && startTime2 != 0) {
                         computedTime = getTimeBetweenStarts(startTime1, startTime2);
-                        Toast.makeText(this,"Temps ecoule depuis dernier intervalle : "+formatTime(computedTime),Toast.LENGTH_LONG).show();
-                        resetStartTime();
+                        showComputedTime();
 					}
 				}
 				else if(timer2.length>0) {
@@ -1587,13 +1631,14 @@ public class TimerActivity extends Activity implements OnClickListener {
 					timer2UI.timerStartStopResumeButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_media_play,0,0,0);
 					timer2.resume=false;
 					timer2.stop();
+					stopCoundDownTimer(CdT);
 					Timer.removeAlarmManager(TimerActivity.this, timer2);
 					Timer.updateTimerRecord(false,false,timer2,TimerActivity.this,URI);
 					timer2Handler.removeCallbacks(timer2UpdateTimeTask);
 					timer2UI.timerProgressBar.setVisibility(View.GONE);
 					setTime(timer2UI,timer2);
 					startTime1=getCurrentTime();
-					//ShowComputedTime()
+
 				}
 				else if(timer2.length<=0) {
 					showToast("Ce compte a rebours n'a pas de durée. Vous pouvez en ajouter avec le bouton +.");
