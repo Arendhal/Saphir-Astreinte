@@ -9,7 +9,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Rect;
+import android.graphics.Xfermode;
 import android.media.AudioManager;
+import android.media.CamcorderProfile;
 import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -52,6 +54,7 @@ import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class StopwatchActivity extends Activity implements OnClickListener {
 
@@ -103,10 +106,16 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 	private DialogInterface.OnClickListener alertDialogClickListener = null;
 	private AlertDialog.Builder alertDialog = null;
 	private Toast toast = null;
+    private Date fridayPM = null;
+    private Date mondayAM = null;
+    private long timeToResume=0;
+    private long timeBetweenStarts=0;
+    private long startTime=0;
 	
 	//private static final String TAG = "StopwatchActivity";
 	public static final Uri URI = Stopwatch.Stopwatches.CONTENT_URI;
 	public static final int ACTIVITY_TAB_NUMBER = 1;
+
     public static String strDate=" ";
 
 	/** Called when the activity is first created. */
@@ -142,10 +151,10 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 		sharedPrefs = getSharedPreferences(MainActivity.PREFS_NAME, Context.MODE_PRIVATE);
 		sharedPrefsEditor = sharedPrefs.edit();
 
-   		toast = Toast.makeText(this, "", Toast.LENGTH_LONG);
 
    		setVolumeControlStream(AudioManager.STREAM_MUSIC);
    		CreateWorkbook(this);
+
 
 	}
     public Workbook CreateWorkbook(Context context){
@@ -214,11 +223,64 @@ public class StopwatchActivity extends Activity implements OnClickListener {
       return wb_stopwatch;
     }
 
+    public void createAnchorDate(){
+        //Creation of anchors date
+                //TODO
+		mondayAM = (new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR) , Calendar.getInstance().get(Calendar.MONTH), 14)).getTime();
+		mondayAM.setTime(mondayAM.getTime() + 26100000);
+
+		fridayPM = (new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR) , Calendar.getInstance().get(Calendar.MONTH), 11).getTime());
+		fridayPM.setTime(fridayPM.getTime() +44100000);
+
+	}
+
+	public long getCurrentTime(){
+		return System.currentTimeMillis();
+	}
+
+	public long getTimeBetweenStartStop(long startTime, long currentTime){
+		timeBetweenStarts = startTime -currentTime;
+		return timeBetweenStarts;
+	}
+
+	public long getTimeUntilResume(long mondayAmTime, long currentTime){
+		timeToResume = mondayAmTime-currentTime;
+		return  timeToResume;
+	}
+
     public static File getFile(){
         File folder = new File(MainActivity.context.getExternalFilesDir(null),"");
         File file = new File(folder,"RapportChronos_"+strDate+".xls");
         return file;
 	}
+
+	public void showTimes() {
+		String signe =  ">";
+		if(timeBetweenStarts < 86400000){
+				signe = "<";
+		}
+		String str1= "Temps de repos " + signe + " 24H depuis la derniere sortie.";
+		String str2 = "Il vous reste "+formatTime(timeToResume)+" avant votre reprise.";
+		AlertDialog alertdialog = new AlertDialog.Builder(this).create();
+		alertdialog.setTitle("Temps ecoulé:");
+		alertdialog.setMessage(str1+"\n"+str2);
+		alertdialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+				new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+				});
+		alertdialog.show();
+	}
+
+    public String formatTime(long ms){
+        long sec = ms/1000;
+        long mn = sec/60;
+        long h = mn/60;
+        long d = h/24;
+        return ""+d+" jours "+h%24+"H "+mn%60+"mn "+sec%60+"s";
+    }
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 	    if (keyCode == KeyEvent.KEYCODE_VOLUME_UP && sharedPrefs.getString("volumeButtonsPref", getString(R.string.volumeButtonsPrefDefaultValue)).equals("0")) 
@@ -245,9 +307,7 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 	};
 	
     private void showToast(String text) {
-		toast.cancel();
-		toast.setText(text);
-		toast.show();
+        Toast.makeText(this,text,Toast.LENGTH_LONG).show();
     }
 	
 	public void onPause() {
@@ -570,7 +630,6 @@ public class StopwatchActivity extends Activity implements OnClickListener {
     	return(stopwatch);
 	}
 
-	
 	public boolean prevStopwatchExists(int id) {
     	boolean exists=false;
     	cursor = this.getContentResolver().query(
@@ -782,6 +841,9 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 				stopwatch2UI.swStartStopResumeButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_media_pause,0,0,0);
 				stopwatch2.resume=true;
 				stopwatch2.start();
+				createAnchorDate();
+				startTime = getCurrentTime();
+				//logValues();
 				Stopwatch.updateStopwatchRecord(stopwatch2,StopwatchActivity.this,URI);
 				stopwatch2UI.swProgressBar.setVisibility(View.VISIBLE);
 				stopwatch2Handler.post(stopwatch2UpdateTimeTask);
@@ -791,6 +853,9 @@ public class StopwatchActivity extends Activity implements OnClickListener {
 				stopwatch2UI.swStartStopResumeButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_media_play,0,0,0);
 				stopwatch2.resume=false;
 				stopwatch2.stop();
+				getTimeBetweenStartStop(startTime,getCurrentTime());
+				getTimeUntilResume(mondayAM.getTime(),getCurrentTime());
+				showTimes();
 				Stopwatch.updateStopwatchRecord(stopwatch2,StopwatchActivity.this,URI);
 				stopwatch2UI.swProgressBar.setVisibility(View.GONE);
 				stopwatch2Handler.removeCallbacks(stopwatch2UpdateTimeTask);

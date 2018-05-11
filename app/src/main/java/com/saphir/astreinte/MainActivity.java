@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
 	private TabHost tabHost;
 	private LocalActivityManager localActivityManager;
-	private AdView adView;
+
 
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
@@ -251,9 +251,6 @@ public class MainActivity extends AppCompatActivity {
 		if(localActivityManager!=null)
 			localActivityManager.dispatchPause(this.isFinishing());
 
-		if (adView != null)
-			adView.pause();
-
 		super.onPause();
 
         if(mainActivityBroadcastReceiver!=null)
@@ -267,10 +264,7 @@ public class MainActivity extends AppCompatActivity {
 		if(localActivityManager!=null) {
 			localActivityManager.dispatchDestroy(this.isFinishing());
 		}
-		if (adView != null)
-			adView.destroy();
-
-		super.onDestroy();
+	    super.onDestroy();
 	}
 
 	public static void addOrRemoveMainNotification(Context context, boolean forceRemove) {
@@ -368,9 +362,6 @@ public class MainActivity extends AppCompatActivity {
 
 		if(localActivityManager!=null)
 			localActivityManager.dispatchResume();
-
-		if (adView != null)
-			adView.resume();
 
 		IntentFilter intentFilter = new IntentFilter();
 		intentFilter.addAction(MainActivity.class.getPackage().getName()+".timer_expired");

@@ -134,6 +134,7 @@ public class TimerActivity extends Activity implements OnClickListener {
 	private Handler timer3Handler = null;
 	private RealView realView = null;
 	private CountDownTimer CdT =null;
+
 	private boolean deleteTimer = false;
 	private long startTime1 = 0;
 	private long startTime2 = 0;
@@ -267,32 +268,6 @@ public class TimerActivity extends Activity implements OnClickListener {
         File folder = new File(MainActivity.context.getExternalFilesDir(null),"");
         File file = new File(folder,"RapportTimers_"+strDate+".xls");
         return file;
-    }
-
-    public long getCurrentTime(){
-        long currentTime = Calendar.getInstance().getTimeInMillis();
-        return  currentTime;
-    }
-
-    public long getTimeBetweenStarts(long startTime1, long startTime2){
-        long result = startTime2-startTime1;
-        startTime1=0;
-        startTime2=0;
-        return result;
-    }
-
-    public void showComputedTime(){
-        AlertDialog alertdialog = new AlertDialog.Builder(this).create();
-        alertdialog.setTitle("Temps ecoulé depuis derniere mission");
-        alertdialog.setMessage("Il s'est ecoulé "+formatTime(computedTime)+"\n"+"Merci de respecter les accords entreprise et les 24H de repos consécutifs.");
-        alertdialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        alertdialog.show();
     }
 
     public CountDownTimer countDownHalfHour(){
@@ -1615,29 +1590,23 @@ public class TimerActivity extends Activity implements OnClickListener {
 					timer2UI.timerStartStopResumeButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_media_pause,0,0,0);
 					timer2.resume=true;
 					timer2.start();
-					countDownHalfHour();
-					startTime2=getCurrentTime();
+					//startTime2=getCurrentTime();
 					Timer.addAlarmManager(TimerActivity.this, timer2);
 					Timer.updateTimerRecord(false,false,timer2,TimerActivity.this,URI);
 					timer2UI.timerProgressBar.setVisibility(View.VISIBLE);
 					timer2Handler.post(timer2UpdateTimeTask);
-					if(startTime1 !=0  && startTime2 != 0) {
-                        computedTime = getTimeBetweenStarts(startTime1, startTime2);
-                        showComputedTime();
-					}
+
 				}
 				else if(timer2.length>0) {
 					timer2UI.timerStartStopResumeButton.setText("Reprendre");
 					timer2UI.timerStartStopResumeButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_media_play,0,0,0);
 					timer2.resume=false;
-					timer2.stop();
-					stopCoundDownTimer(CdT);
 					Timer.removeAlarmManager(TimerActivity.this, timer2);
 					Timer.updateTimerRecord(false,false,timer2,TimerActivity.this,URI);
 					timer2Handler.removeCallbacks(timer2UpdateTimeTask);
 					timer2UI.timerProgressBar.setVisibility(View.GONE);
 					setTime(timer2UI,timer2);
-					startTime1=getCurrentTime();
+					//startTime1=getCurrentTime();
 
 				}
 				else if(timer2.length<=0) {
@@ -1648,7 +1617,7 @@ public class TimerActivity extends Activity implements OnClickListener {
 				timer2UI.timerStartStopResumeButton.setText("Commencer");
 				timer2UI.timerStartStopResumeButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_media_play,0,0,0);
 				timer2.reset();
-				startTime1=getCurrentTime();
+				//startTime1=getCurrentTime();
 				Timer.removeAlarmManager(TimerActivity.this, timer2);
 				resetAllOtherIntervals();
 				Timer.updateTimerRecord(false,false,timer2,TimerActivity.this,URI);

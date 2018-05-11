@@ -1,14 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:animated-vector-drawable-23.2.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-23.2.1.aar/b23308c92ad5a65b7346cc8f2f5caf74/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-23.2.1.aar/b23308c92ad5a65b7346cc8f2f5caf74/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-23.2.1.aar/9e3cfe166705572a5f04732df3ec5d68/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-23.2.1.aar/9e3cfe166705572a5f04732df3ec5d68/res" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/animated-vector-drawable/23.2.1/animated-vector-drawable-23.2.1-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/animated-vector-drawable/23.2.1/animated-vector-drawable-23.2.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/animated-vector-drawable/23.2.1/9ac3eb49cf56bfdcb2de8ccb1f280aac570bd6d1/animated-vector-drawable-23.2.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

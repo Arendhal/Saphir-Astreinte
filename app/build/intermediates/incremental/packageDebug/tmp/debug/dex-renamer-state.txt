@@ -1,7 +1,10 @@
-#Thu May 03 09:10:16 CEST 2018
-base.0=C\:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+#Wed May 09 14:29:14 MUT 2018
+path.2=classes.dex
 path.1=classes.dex
-renamed.1=classes2.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+base.2=C\:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+base.1=C\:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+base.0=C\:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12

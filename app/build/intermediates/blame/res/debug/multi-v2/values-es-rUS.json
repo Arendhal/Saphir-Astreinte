@@ -4,24 +4,7 @@
             "outputFile": "C:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.0.aar\\6d6858c938a26a4a59a5d548104d91bb\\res\\values-es-rUS\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "204",
-                        "endOffsets": "455"
-                    },
-                    "to": {
-                        "startLines": "29",
-                        "startColumns": "4",
-                        "startOffsets": "3291",
-                        "endColumns": "204",
-                        "endOffsets": "3491"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-15.0.0.aar\\1b72f4198a1da4ba97f3b3d8890ea981\\res\\values-es-rUS\\values.xml",
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-15.0.0.aar\\ea48e2b7ec8c8bf76ac7e6fb4542bde9\\res\\values-es-rUS\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10",
                         "startColumns": "0,0,0,0,0,0,0",
@@ -38,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.2.1.aar\\96582f4f6c182dd2935060ef228aaff2\\res\\values-es-rUS\\values-es-rUS.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,175,283,406,515,623,708,809,932,1016,1097,1179,1291,1403,1504,1612,1719,1826,1948,2048",
-                        "endColumns": "119,107,122,108,107,84,100,122,83,80,81,111,111,100,107,106,106,121,99,100",
-                        "endOffsets": "170,278,401,510,618,703,804,927,1011,1092,1174,1286,1398,1499,1607,1714,1821,1943,2043,2144"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,225,333,456,565,673,758,859,982,1066,1147,1229,1341,1453,1554,1662,1769,1876,1998,5562",
-                        "endColumns": "119,107,122,108,107,84,100,122,83,80,81,111,111,100,107,106,106,121,99,100",
-                        "endOffsets": "220,328,451,560,668,753,854,977,1061,1142,1224,1336,1448,1549,1657,1764,1871,1993,2093,5658"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.0.aar\\7b1167a4e68e24a0c291a982f0a982f9\\res\\values-es-rUS\\values.xml",
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\702c51503fe9340adea2d14641a7f022\\res\\values-es-rUS\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +35,40 @@
                         "startOffsets": "2098,2208,2406,2540,2650,2870,3003,3156,3496,3726,3837,4038,4173,4409,4617,4717,4809",
                         "endColumns": "109,197,133,109,219,132,152,134,229,110,200,134,235,207,99,91,106",
                         "endOffsets": "2203,2401,2535,2645,2865,2998,3151,3286,3721,3832,4033,4168,4404,4612,4712,4804,4911"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\441676d92dfc2c878a2f0f30bc518c47\\res\\values-es-rUS\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "204",
+                        "endOffsets": "455"
+                    },
+                    "to": {
+                        "startLines": "29",
+                        "startColumns": "4",
+                        "startOffsets": "3291",
+                        "endColumns": "204",
+                        "endOffsets": "3491"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.2.1.aar\\8bbafca612bd1baf4d3517fc831d5c1c\\res\\values-es-rUS\\values-es-rUS.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,175,283,406,515,623,708,809,932,1016,1097,1179,1291,1403,1504,1612,1719,1826,1948,2048",
+                        "endColumns": "119,107,122,108,107,84,100,122,83,80,81,111,111,100,107,106,106,121,99,100",
+                        "endOffsets": "170,278,401,510,618,703,804,927,1011,1092,1174,1286,1398,1499,1607,1714,1821,1943,2043,2144"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,225,333,456,565,673,758,859,982,1066,1147,1229,1341,1453,1554,1662,1769,1876,1998,5562",
+                        "endColumns": "119,107,122,108,107,84,100,122,83,80,81,111,111,100,107,106,106,121,99,100",
+                        "endOffsets": "220,328,451,560,668,753,854,977,1061,1142,1224,1336,1448,1549,1657,1764,1871,1993,2093,5658"
                     }
                 }
             ]

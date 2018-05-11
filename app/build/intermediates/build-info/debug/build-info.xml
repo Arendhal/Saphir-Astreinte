@@ -6,23 +6,23 @@
     density="xhdpi"
     format="10"
     ir-eligibility="COMPATIBLE"
-    plugin-version="3.1.1"
-    timestamp="1525332293826"
+    plugin-version="3.1.2"
+    timestamp="1526017169019"
     token="5372593344488815707"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="2886" />
+        duration="1922" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="111" />
+        duration="171" />
     <task
         name="verifier"
-        duration="78" />
+        duration="72" />
 
     <artifact
         location="C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
@@ -33,7 +33,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1525332001408"
+        timestamp="1526013542470"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
@@ -74,8 +74,16 @@
     </build>
     <build
         build-mode="COLD"
+        timestamp="1526017001906"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1525332293826"
+        timestamp="1526017169019"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\LEGUEN\Desktop\Saphir Astreinte\Saphir Astreinte\app\build\intermediates\split-apk\debug\slices\slice_7.apk"

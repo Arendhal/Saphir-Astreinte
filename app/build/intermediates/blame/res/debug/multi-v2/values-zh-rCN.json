@@ -4,7 +4,24 @@
             "outputFile": "C:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.0.aar\\6d6858c938a26a4a59a5d548104d91bb\\res\\values-zh-rCN\\values.xml",
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\702c51503fe9340adea2d14641a7f022\\res\\values-zh-rCN\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "249,348,509,622,722,886,1000,1128,1245,1412,1511,1672,1785,1948,2082,2164,2247",
+                        "endColumns": "98,160,112,99,163,113,127,116,166,98,160,112,162,133,81,82,98",
+                        "endOffsets": "347,508,621,721,885,999,1127,1244,1411,1510,1671,1784,1947,2081,2163,2246,2345"
+                    },
+                    "to": {
+                        "startLines": "21,22,23,24,25,26,27,28,30,31,32,33,34,35,36,37,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1924,2027,2188,2305,2409,2573,2691,2823,3102,3269,3372,3533,3650,3813,3951,4037,4124",
+                        "endColumns": "102,160,116,103,163,117,131,120,166,102,160,116,162,137,85,86,102",
+                        "endOffsets": "2022,2183,2300,2404,2568,2686,2818,2939,3264,3367,3528,3645,3808,3946,4032,4119,4222"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\441676d92dfc2c878a2f0f30bc518c47\\res\\values-zh-rCN\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-15.0.0.aar\\1b72f4198a1da4ba97f3b3d8890ea981\\res\\values-zh-rCN\\values.xml",
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-15.0.0.aar\\ea48e2b7ec8c8bf76ac7e6fb4542bde9\\res\\values-zh-rCN\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10",
                         "startColumns": "0,0,0,0,0,0,0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.2.1.aar\\96582f4f6c182dd2935060ef228aaff2\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.2.1.aar\\8bbafca612bd1baf4d3517fc831d5c1c\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -52,23 +69,6 @@
                         "startOffsets": "105,201,308,431,526,626,708,805,911,987,1063,1141,1237,1333,1428,1525,1620,1718,1830,4705",
                         "endColumns": "95,106,122,94,99,81,96,105,75,75,77,95,95,94,96,94,97,111,93,100",
                         "endOffsets": "196,303,426,521,621,703,800,906,982,1058,1136,1232,1328,1423,1520,1615,1713,1825,1919,4801"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.0.aar\\7b1167a4e68e24a0c291a982f0a982f9\\res\\values-zh-rCN\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "249,348,509,622,722,886,1000,1128,1245,1412,1511,1672,1785,1948,2082,2164,2247",
-                        "endColumns": "98,160,112,99,163,113,127,116,166,98,160,112,162,133,81,82,98",
-                        "endOffsets": "347,508,621,721,885,999,1127,1244,1411,1510,1671,1784,1947,2081,2163,2246,2345"
-                    },
-                    "to": {
-                        "startLines": "21,22,23,24,25,26,27,28,30,31,32,33,34,35,36,37,38",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1924,2027,2188,2305,2409,2573,2691,2823,3102,3269,3372,3533,3650,3813,3951,4037,4124",
-                        "endColumns": "102,160,116,103,163,117,131,120,166,102,160,116,162,137,85,86,102",
-                        "endOffsets": "2022,2183,2300,2404,2568,2686,2818,2939,3264,3367,3528,3645,3808,3946,4032,4119,4222"
                     }
                 }
             ]

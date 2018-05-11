@@ -4,7 +4,24 @@
             "outputFile": "C:\\Users\\LEGUEN\\Desktop\\Saphir Astreinte\\Saphir Astreinte\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.0.aar\\6d6858c938a26a4a59a5d548104d91bb\\res\\values-si\\values.xml",
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-15.0.0.aar\\ea48e2b7ec8c8bf76ac7e6fb4542bde9\\res\\values-si\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "197,267,385,451,526,608,717",
+                        "endColumns": "69,117,65,74,81,108,77",
+                        "endOffsets": "266,384,450,525,607,716,794"
+                    },
+                    "to": {
+                        "startLines": "20,21,22,23,24,25,26",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "2784,2858,2980,3050,3129,3215,3328",
+                        "endColumns": "73,121,69,78,85,112,81",
+                        "endOffsets": "2853,2975,3045,3124,3210,3323,3405"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\441676d92dfc2c878a2f0f30bc518c47\\res\\values-si\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.0.aar\\7b1167a4e68e24a0c291a982f0a982f9\\res\\values-si\\values.xml",
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\702c51503fe9340adea2d14641a7f022\\res\\values-si\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\677032287ebbfcdac19fe326f6308c33\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\b22be71d45a66b4a6911de18c2ad1a77\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -52,23 +69,6 @@
                         "startOffsets": "3410",
                         "endColumns": "100",
                         "endOffsets": "3506"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\LEGUEN\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-15.0.0.aar\\1b72f4198a1da4ba97f3b3d8890ea981\\res\\values-si\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10",
-                        "startColumns": "0,0,0,0,0,0,0",
-                        "startOffsets": "197,267,385,451,526,608,717",
-                        "endColumns": "69,117,65,74,81,108,77",
-                        "endOffsets": "266,384,450,525,607,716,794"
-                    },
-                    "to": {
-                        "startLines": "20,21,22,23,24,25,26",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "2784,2858,2980,3050,3129,3215,3328",
-                        "endColumns": "73,121,69,78,85,112,81",
-                        "endOffsets": "2853,2975,3045,3124,3210,3323,3405"
                     }
                 }
             ]

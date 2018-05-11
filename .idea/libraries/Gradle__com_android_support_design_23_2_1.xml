@@ -1,14 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:design-23.2.1">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-23.2.1.aar/4d5a5bff007ae1f1683b129f1cc95a4a/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-23.2.1.aar/4d5a5bff007ae1f1683b129f1cc95a4a/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-23.2.1.aar/6466dc5c994a0450e6ee8553c7302d32/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-23.2.1.aar/6466dc5c994a0450e6ee8553c7302d32/res" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/design/23.2.1/design-23.2.1-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/design/23.2.1/design-23.2.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/design/23.2.1/370a5558bb1365cb53a0d8a5d637d403d3c3a48d/design-23.2.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
